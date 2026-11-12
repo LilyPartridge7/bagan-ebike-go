@@ -36,12 +36,12 @@ export const BaganParallaxBackground: React.FC<BaganParallaxBackgroundProps> = (
           loop
           muted
           playsInline
-          poster="/bagan-ebike-fleet.jpg"
           src="/bagan-sunrise.mp4"
           onLoadedData={() => setVideoLoaded(true)}
+          onPlaying={() => setVideoLoaded(true)}
           onError={() => setVideoError(true)}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            videoLoaded ? 'opacity-90' : 'opacity-40'
+            videoLoaded ? 'opacity-90' : 'opacity-0'
           }`}
         />
       )}

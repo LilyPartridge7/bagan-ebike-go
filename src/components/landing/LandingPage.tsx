@@ -37,6 +37,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ bikes, lang, onNavigat
 
   // State for interactive 3-step selector
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const [heroVideoLoaded, setHeroVideoLoaded] = useState(false);
 
   // State for interactive rate calculator
   const [selectedPackageId, setSelectedPackageId] = useState<'hourly' | 'half_day' | 'full_day'>('half_day');
@@ -96,15 +97,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({ bikes, lang, onNavigat
           1. FULL-SCREEN INTERACTIVE HERO SECTION
          ───────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col items-center justify-center text-center px-4 -mt-6 pt-10 pb-16 overflow-hidden rounded-3xl">
-        {/* Background Looping Video */}
+        {/* Background Looping Video - no poster flash, smoothly fades in when ready */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          poster="/bagan-ebike-fleet.jpg"
           src="/bagan-sunrise.mp4"
-          className="absolute inset-0 w-full h-full object-cover -z-20 opacity-85"
+          onLoadedData={() => setHeroVideoLoaded(true)}
+          onPlaying={() => setHeroVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover -z-20 transition-opacity duration-1000 ${
+            heroVideoLoaded ? 'opacity-85' : 'opacity-0'
+          }`}
         />
 
         {/* Warm Dark Scrim Gradient as specified in prompt */}
