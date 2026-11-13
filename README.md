@@ -1,4 +1,4 @@
-# 🚲 Bagan E-Bike Go (ပုဂံ အီးဘိုက်)
+#  Bagan E-Bike Go (ပုဂံ အီးဘိုက်)
 
 > **Smart E-Bike Rental, Mobile Payments & GPS Roadside Rescue in Bagan, Myanmar**
 
@@ -15,16 +15,16 @@ It replaces outdated paper logbooks and manual deposit systems with instant QR h
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
-### 🛵 1. Rider Experience (Mobile-First)
+###  1. Rider Experience (Mobile-First)
 - **Instant Handlebar QR Scanner:** Fast camera scanner via `html5-qrcode` with rear-camera autofocus, manual Bike ID fallback (e.g. `BGN-004`), and instant test-scan simulations.
 - **Direct QR Deep-Linking:** Scanning a physical QR sticker pointing to `https://bagan-ebike-go.vercel.app/?bike=BGN-004` automatically bypasses the landing page and opens the check-in screen for that specific e-bike.
 - **30-Second Digital Check-In:** Form capturing full name, phone number, preferred messaging platform (**WhatsApp, Telegram, or Viber**), Bagan hotel/guesthouse name (or NRC/passport), and Bagan Archaeological Zone heritage safety regulations agreement.
 - **Transparent Rental Packages:**
-  - ⏱️ **Hourly Explorer:** `1,500 MMK/hr` (Quick sunrise temple hops)
-  - 🌅 **Half-Day Bagan Tour:** `4,000 MMK` (4 hours — sunrise or sunset expeditions)
-  - ☀️ **Full-Day Sunrise-to-Sunset:** `7,000 MMK` (12 hours unlimited access)
+  -  **Hourly Explorer:** `1,500 MMK/hr` (Quick sunrise temple hops)
+  -  **Half-Day Bagan Tour:** `4,000 MMK` (4 hours — sunrise or sunset expeditions)
+  -  **Full-Day Sunrise-to-Sunset:** `7,000 MMK` (12 hours unlimited access)
 - **Flexible Multi-Payment Checkout:**
   - **MMQR / Local Wallets:** Displays dynamic payment QR for KBZPay, WavePay, AYA Pay, and CB Pay with transaction ID input and optional receipt screenshot upload preview.
   - **Station Cash Pay:** Reserve and pay in MMK or USD at the shop counter with instant pending status.
@@ -36,7 +36,7 @@ It replaces outdated paper logbooks and manual deposit systems with instant QR h
 
 ---
 
-### 🗺️ 2. Shop Owner & Admin Dashboard
+###  2. Shop Owner & Admin Dashboard
 - **Live Bagan Fleet Radar Map:** Interactive Leaflet map centered on Bagan (`21.1717° N, 94.8585° E`) displaying color-coded bike status pins:
   - 🟢 **Available:** Ready for rent at stations across Old Bagan, New Bagan, and Nyaung-U.
   - 🔵 **In Use:** Active ride with rider name and live GPS coordinates.
@@ -47,7 +47,7 @@ It replaces outdated paper logbooks and manual deposit systems with instant QR h
 
 ---
 
-### 🎨 3. Design & Bilingual Support
+###  3. Design & Bilingual Support
 - **Visual Identity:** Warm terracotta, sandstone, and deep emerald palette reflecting Bagan's historic brick pagodas and bougainvillea flora.
 - **Ambient Media:** High-contrast daylight interface layered over an ambient looping sunrise video (`/bagan-sunrise.mp4`) with an animated SVG pagoda and hot-air balloon fallback.
 - **Bilingual Interface:** Instant one-click toggle between **English** and **မြန်မာဘာသာ (Myanmar)** across all rider flows and admin screens.
@@ -55,7 +55,7 @@ It replaces outdated paper logbooks and manual deposit systems with instant QR h
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+##  Tech Stack & Architecture
 
 - **Core:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Bundler & Build Tool:** [Vite 6](https://vitejs.dev/)
@@ -67,7 +67,7 @@ It replaces outdated paper logbooks and manual deposit systems with instant QR h
 
 ---
 
-## 💻 Steps to Run Locally
+##  Steps to Run Locally
 
 ### Prerequisites
 Make sure you have **Node.js** (v18.0.0 or higher) and **npm** installed on your computer.
@@ -108,7 +108,7 @@ npm run preview
 
 ---
 
-## 🧭 Testing URLs & Query Parameters
+##  Testing URLs & Query Parameters
 
 Once the dev server is running, you can test different app states by visiting:
 
@@ -121,7 +121,7 @@ Once the dev server is running, you can test different app states by visiting:
 
 ---
 
-## 🚀 Deployment to Vercel
+##  Deployment to Vercel
 
 The repository includes a pre-configured `vercel.json` with SPA route rewrites:
 
@@ -142,6 +142,3 @@ The repository includes a pre-configured `vercel.json` with SPA route rewrites:
 5. Click **Deploy**. Your app will be live with full deep-linking support!
 
 ---
-
-## 📄 License
-This project is open-source under the [MIT License](LICENSE).
